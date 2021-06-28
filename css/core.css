@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 1000px;
+  height: 100vh;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #000;
+}
+
+.container form {
+  width: 300px;
+  height: 400px;
+  border: 1px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container form h1 {
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#e233ff), to(#ff6b00));
+  background: linear-gradient(to right, #e233ff, #ff6b00);
+  color: #fff;
+  text-align: center;
+}
+
+.container form input {
+  width: 80%;
+  height: 40px;
+  margin: 10px;
+  outline: none;
+  border: none;
+  background: #dbdbdb;
+  text-align: center;
+  font-size: larges;
+  border-radius: 120px;
+}
+
+.container form #button {
+  cursor: pointer;
+  margin: 140px 10px 10px 10px;
+  background: -webkit-gradient(linear, left top, right top, from(#e233ff), to(#ff6b00));
+  background: linear-gradient(to right, #e233ff, #ff6b00);
+  font-size: 14px;
+  width: 40%;
+}
+
+.container form #button:hover {
+  color: #fff;
+}
+/*# sourceMappingURL=core.css.map */
