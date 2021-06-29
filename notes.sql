@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 28, 2021 at 08:13 PM
+-- Generation Time: Jun 29, 2021 at 11:13 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -40,8 +40,12 @@ CREATE TABLE `note` (
 --
 
 INSERT INTO `note` (`id_note`, `id_user`, `title`, `content`) VALUES
-(4, 1624906911, 'hjkb,hbmbnjjk', 'fffffffffffffdsfgsdcfdcfv'),
-(5, 1624906911, 'hjkb,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxhbmbnjjk', 'fffffffffffffdsfgsdcfdcfv');
+(5, 1624906911, 'hjkb,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxhbmbnjjk', 'fffffffffffffdsfgsdcfdcfv'),
+(10, 1, 'test 1', '                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id doloribus ipsa culpa eius aspernatur laborum earum dignissimos ea, fugiat explicabo fuga nemo natus, quasi deserunt est eum placeat beatae, pariatur sunt illo aliquam. Impedit natus totam reiciendis? Maxime dicta laudantium quod quis doloremque quo.\r\n'),
+(11, 1, 'test 2', '                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id doloribus ipsa culpa eius aspernatur laborum earum dignissimos ea, fugiat explicabo fuga nemo natus, quasi deserunt est eum placeat beatae, pariatur sunt illo aliquam. Impedit natus totam reiciendis? Maxime dicta laudantium quod quis doloremque quo.\r\n'),
+(14, 1, 'zzzzzzzz', 'zzzzzzzzzzzzzzzz'),
+(15, 1, 'zzzzzzzz', 'zzzzzzzzzzzzzzzz'),
+(16, 1, 'zzzzzzzz', 'zzzzzzzzzzzzzzzz');
 
 -- --------------------------------------------------------
 
@@ -90,7 +94,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `note`
 --
 ALTER TABLE `note`
-  MODIFY `id_note` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_note` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `users`

@@ -1,0 +1,187 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.newnotes {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #9b9b9b;
+}
+
+.newnotes .error {
+  width: 300px;
+  background-color: red;
+  text-align: center;
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+  display: none;
+}
+
+.newnotes .title {
+  margin: 40px 0 0 0;
+  width: 300px;
+  height: 40px;
+  border-bottom: #000 solid 1px;
+  position: relative;
+}
+
+.newnotes .title input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  background-color: #9b9b9b;
+}
+
+.newnotes .title label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  font-size: large;
+  color: #000;
+}
+
+.newnotes .context {
+  margin: 40px 0 0 0;
+  width: 300px;
+  border-bottom: #000 solid 1px;
+  position: relative;
+}
+
+.newnotes .context textarea {
+  border: none;
+  outline: none;
+  background-color: #9b9b9b;
+}
+
+.newnotes .context label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  font-size: large;
+  color: #000;
+}
+
+.newnotes .button {
+  margin: 40px 0 0 0;
+  width: 300px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.newnotes .button #save {
+  width: 80px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: none;
+  border: #000 solid 1px;
+}
+
+.newnotes .button #save:hover {
+  cursor: pointer;
+  border: #38ef7d solid 1px;
+  color: #38ef7d;
+}
+
+.notes {
+  width: 100%;
+  height: 100%;
+}
+
+.notes .note {
+  float: left;
+  margin: 10px;
+  width: 300px;
+  min-height: 400px;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  -webkit-box-shadow: -10px 1px 20px 20px #00000021;
+          box-shadow: -10px 1px 20px 20px #00000021;
+}
+
+.notes .note .delete {
+  width: 100%;
+  min-height: 20%;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  position: relative;
+}
+
+.notes .note .delete h1 {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.notes .note .delete .bi-trash {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #000;
+  cursor: pointer;
+}
+
+.notes .note .delete .bi-trash:hover {
+  color: red;
+}
+
+.notes .note Section {
+  width: 100%;
+  min-height: calc(100% - 20%);
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  padding: 10px;
+}
+
+.show {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.show .bi-plus-circle-fill {
+  cursor: pointer;
+  color: #000;
+}
+
+.active {
+  -webkit-transform: rotate(231deg);
+          transform: rotate(231deg);
+}
+
+.active .bi-plus-circle-fill {
+  cursor: pointer;
+  color: red;
+}
+/*# sourceMappingURL=notes.css.map */

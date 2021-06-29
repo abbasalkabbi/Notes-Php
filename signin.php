@@ -1,3 +1,35 @@
+<?php
+include_once 'php/config.php'; //import config
+session_start();
+if($_SESSION[id]){
+    // if sigin in 
+     header("location: notes.php");
+}
+$username=$_POST['username'];// hendle input username
+$password=$_POST['password'];// hendle input password
+if(isset($_POST['login'])){
+ 
+    if(!empty($username) && !empty($password)){
+        // if input not empty
+        // check is correct
+       $login= mysqli_query($conn,"SELECT * FROM users WHERE username ='{$username}' AND password = '{$password}'");
+      // check if input is login
+       if(mysqli_num_rows($login) > 0){
+        // get Unique_id
+while($obj = mysqli_fetch_object($login)){
+
+    $Unique_id= $obj -> Unique_id; //hendle Unique_id
+}
+$_SESSION['id']=$Unique_id; // hendle Unique_id to $_SESSION['id']
+
+       }
+
+    }
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +38,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/core.css">
-    <title>create </title>
+    <title>log in </title>
 </head>
 
 <body>
@@ -23,7 +55,7 @@
             <!--password--->
             <input type="text" name="password" id="password" placeholder="Password" required>
             <!---submit--->
-            <input type="submit" value="Log in" name="Registration" id="button">
+            <input type="submit" value="Log in" name="login" id="button">
             <a href="index.php"> Don't have a account</a>
         </form>
     </div>

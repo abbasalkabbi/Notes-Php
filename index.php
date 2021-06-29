@@ -1,10 +1,10 @@
 <?php
 session_start();
 // check if you are sign in 
-/*if($_SESSION[id]){
+if($_SESSION[id]){
     // if sigin in 
-     header("location: php/notes.php");
-}*/ // now off 
+     header("location: notes.php");
+}
 // if not sigin
 // import db 
 include_once 'php/config.php';
