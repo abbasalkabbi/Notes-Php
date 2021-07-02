@@ -184,4 +184,25 @@
   cursor: pointer;
   color: red;
 }
+
+.logout {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.logout button {
+  background-color: red;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.logout button:hover {
+  -webkit-box-shadow: 6px 4px 20px 0px rgba(0, 0, 0, 0.61);
+          box-shadow: 6px 4px 20px 0px rgba(0, 0, 0, 0.61);
+}
 /*# sourceMappingURL=notes.css.map */

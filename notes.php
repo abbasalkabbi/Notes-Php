@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include_once 'php/config.php'; //import config
+include_once 'php/inc/config.php'; //import config
 if(!$_SESSION["id"]){
    header("location: signin.php");
 }
@@ -15,7 +15,15 @@ if(isset($_POST['delete'])){
   $delete=mysqli_query($conn,"DELETE FROM note WHERE id_note= '{$id}'");
   echo "<meta http-equiv='refresh' content='0'>";
 }
-//////////////////
+////////////////// 
+
+
+// logout form
+
+if(isset($_POST['logout'])){
+  session_destroy();  
+  echo "<meta http-equiv='refresh' content='0'>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +39,11 @@ if(isset($_POST['delete'])){
 
 <body>
     <div class="container">
+        <!--logout--->
+        <form class="logout" action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
+            <button type="submit" name="logout">Logout</button>
+        </form>
+        <!--end logout--->
         <!--new note-->
         <form class="newnotes">
             <!--header-->
@@ -104,7 +117,7 @@ if(isset($_POST['delete'])){
         </div>
         <!--show all notes--->
         <!--icon add note --->
-        <div class="show" onclick="show()">
+        <div class="show">
             <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor"
                 class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
                 <path

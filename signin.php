@@ -1,5 +1,5 @@
 <?php
-include_once 'php/config.php'; //import config
+include_once 'php/inc/config.php'; //import config
 session_start();
 if($_SESSION[id]){
     // if sigin in 
@@ -21,6 +21,7 @@ while($obj = mysqli_fetch_object($login)){
     $Unique_id= $obj -> Unique_id; //hendle Unique_id
 }
 $_SESSION['id']=$Unique_id; // hendle Unique_id to $_SESSION['id']
+echo "<meta http-equiv='refresh' content='0'>";
 
        }
 
@@ -55,7 +56,7 @@ $_SESSION['id']=$Unique_id; // hendle Unique_id to $_SESSION['id']
             <!--password--->
             <input type="text" name="password" id="password" placeholder="Password" required>
             <!---submit--->
-            <input type="submit" value="Log in" name="login" id="button">
+            <button type="submit" name="login" id="button">login</button>
             <a href="index.php"> Don't have a account</a>
         </form>
     </div>

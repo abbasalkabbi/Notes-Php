@@ -13,7 +13,4 @@ function showandhide() {
     show_div.classList.remove("active");
   }
 }
-
-function show() {
-  showandhide();
-}
+show_div.onclick = () => showandhide();

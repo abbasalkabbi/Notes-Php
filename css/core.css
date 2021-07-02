@@ -63,16 +63,18 @@
           box-shadow: 3px 5px 7px 0px #000000a3;
 }
 
-.container form #button {
+.container form button {
+  border: none;
   cursor: pointer;
   margin: 140px 10px 10px 10px;
   background: -webkit-gradient(linear, left top, right top, from(#e233ff), to(#ff6b00));
   background: linear-gradient(to right, #e233ff, #ff6b00);
   font-size: 14px;
   width: 40%;
+  height: 40px;
 }
 
-.container form #button:hover {
+.container form button:hover {
   color: #fff;
   background: -webkit-gradient(linear, left top, right top, from(#e033ffd0), to(#833c09));
   background: linear-gradient(to right, #e033ffd0, #833c09);

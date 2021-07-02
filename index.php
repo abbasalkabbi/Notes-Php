@@ -7,7 +7,7 @@ if($_SESSION[id]){
 }
 // if not sigin
 // import db 
-include_once 'php/config.php';
+include_once 'php/inc/config.php';
 // hendle username
 $username=$_POST['username'];
 // hendle password
@@ -36,6 +36,7 @@ if(isset($_POST['Registration'])){
    $_SESSION['id']=$Unique_id;
    // test SESSION['id']
   // echo $_SESSION['id'];
+  echo "<meta http-equiv='refresh' content='0'>";
      }
 
     }
@@ -68,7 +69,8 @@ if(isset($_POST['Registration'])){
             <!--password--->
             <input type="text" name="password" id="password" placeholder="Password" required>
             <!---submit--->
-            <input type="submit" value="Create Account" name="Registration" id="button">
+
+            <button type="submit" name="Registration" id="button">Create Account </button>
             <a href="signin.php"> Have a account</a>
         </form>
     </div>
